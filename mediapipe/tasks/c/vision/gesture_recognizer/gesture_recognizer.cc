@@ -228,7 +228,7 @@ int CppGestureRecognizerRecognizeAsync(void* recognizer, const MpImage& image,
   auto cpp_recognizer = static_cast<GestureRecognizer*>(recognizer);
   auto cpp_result = cpp_recognizer->RecognizeAsync(*img, timestamp_ms);
   if (!cpp_result.ok()) {
-    ABSL_LOG(ERROR) << "Data preparation for the image classification failed: "
+    ABSL_LOG(ERROR) << "Data preparation for the gesture recognition failed: "
                     << cpp_result;
     return CppProcessError(cpp_result, error_msg);
   }
